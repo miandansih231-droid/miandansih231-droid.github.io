@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://miandansih231-droid.github.io/sitemap.xml
