@@ -417,6 +417,16 @@
   .reveal{opacity:0; transform:translateY(14px); transition:opacity .5s ease, transform .5s ease;}
   .reveal.in{opacity:1; transform:translateY(0);}
 
+
+  .svc-demo{margin-top:16px; padding-top:14px; border-top:1px dashed var(--line);}
+  .svc-demo .demo-short{font-size:12.5px; color:var(--muted); font-family:'IBM Plex Mono',monospace; line-height:1.5; margin-bottom:8px;}
+  .svc-demo details{font-size:12.5px;}
+  .svc-demo summary{cursor:pointer; color:var(--accent-dark); font-weight:500; font-family:'IBM Plex Mono',monospace; font-size:12px; list-style:none;}
+  .svc-demo summary::-webkit-details-marker{display:none;}
+  .svc-demo summary::before{content:"+ "; }
+  .svc-demo details[open] summary::before{content:"- ";}
+  .svc-demo .demo-long{margin-top:8px; color:var(--muted); line-height:1.6; font-size:12.5px;}
+
   :focus-visible{outline:2px solid var(--accent); outline-offset:2px;}
 </style>
 </head>
@@ -536,30 +546,60 @@
             <h3>Data Entry</h3>
             <p>Accurate manual entry of records, forms and documents into your preferred system.</p>
             <button class="req-btn" onclick="requestService('Data Entry')">Request this service &rarr;</button> <a href="#pf-biz-entry" class="req-btn" style="margin-left:14px; text-decoration:none;">See sample work &rarr;</a>
+            <div class="svc-demo">
+              <p class="demo-short">Short sample: 25 invoice records entered, formatted, zero errors on QA check.</p>
+              <details><summary>See long sample</summary>
+                <p class="demo-long">Long sample: A batch of 25 supplier invoices was entered into a structured spreadsheet with consistent date formatting (DD-MM-YYYY), currency formatting, and a status column. Each row was cross-checked against the source document before marking as complete, and duplicate entries were flagged and removed.</p>
+              </details>
+            </div>
           </div>
           <div class="svc-card">
             <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 9v12"/></svg></div>
             <h3>Microsoft Excel</h3>
             <p>Spreadsheet setup, formulas, formatting and organized workbooks.</p>
             <button class="req-btn" onclick="requestService('Microsoft Excel')">Request this service &rarr;</button> <a href="#pf-excel-clean" class="req-btn" style="margin-left:14px; text-decoration:none;">See sample work &rarr;</a>
+            <div class="svc-demo">
+              <p class="demo-short">Short sample: =SUMIFS() formula built to auto-total monthly expenses by category.</p>
+              <details><summary>See long sample</summary>
+                <p class="demo-long">Long sample: Built a monthly expense workbook with category dropdowns (data validation), a SUMIFS-based summary table that updates automatically, and conditional formatting to highlight entries over budget. Sheet was structured so the client only needed to fill in raw entries.</p>
+              </details>
+            </div>
           </div>
           <div class="svc-card">
             <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg></div>
             <h3>Google Sheets</h3>
             <p>Shared, cloud-based spreadsheets for teams that need real-time collaboration.</p>
             <button class="req-btn" onclick="requestService('Google Sheets')">Request this service &rarr;</button> <a href="#pf-sheet-format" class="req-btn" style="margin-left:14px; text-decoration:none;">See sample work &rarr;</a>
+            <div class="svc-demo">
+              <p class="demo-short">Short sample: Shared tracker set up with view/edit permissions for a 3-person team.</p>
+              <details><summary>See long sample</summary>
+                <p class="demo-long">Long sample: Created a shared Google Sheet order tracker with separate tabs for Orders, Inventory, and Summary. Used IMPORTRANGE-style linking between tabs, protected the formula cells from accidental edits, and set commenting permissions so the team could flag issues without changing data.</p>
+              </details>
+            </div>
           </div>
           <div class="svc-card">
             <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 4h16l-6 8v6l-4 2v-8L4 4Z"/></svg></div>
             <h3>Data Cleaning &amp; Organization</h3>
             <p>Removing errors and duplicates, and structuring raw data so it's easy to use.</p>
             <button class="req-btn" onclick="requestService('Data Cleaning & Organization')">Request this service &rarr;</button> <a href="#pf-excel-clean" class="req-btn" style="margin-left:14px; text-decoration:none;">See sample work &rarr;</a>
+            <div class="svc-demo">
+              <p class="demo-short">Short sample: 40 duplicate customer rows identified and merged into clean records.</p>
+              <details><summary>See long sample</summary>
+                <p class="demo-long">Long sample: A customer list with inconsistent name capitalization, duplicate emails, and missing phone numbers was standardized: names were title-cased, emails lower-cased and de-duplicated, and rows missing required fields were flagged in a separate tab for the client to review.</p>
+              </details>
+            </div>
           </div>
           <div class="svc-card">
             <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h3M8 16h3M14 12h2M14 16h2"/></svg></div>
             <h3>Accounting Data Entry &amp; Admin Support</h3>
             <p>Recording transactions, invoices and administrative documents with care.</p>
             <button class="req-btn" onclick="requestService('Accounting Data Entry & Admin Support')">Request this service &rarr;</button> <a href="#pf-biz-entry" class="req-btn" style="margin-left:14px; text-decoration:none;">See sample work &rarr;</a>
+            <div class="svc-demo">
+              <p class="demo-short">Short sample: Weekly expense log entered with category tags and running balance.</p>
+              <details><summary>See long sample</summary>
+                <p class="demo-long">Long sample: Recorded two weeks of business expenses into a structured ledger with columns for date, vendor, category, amount, and payment method. A running balance column was added, and entries were cross-referenced against receipts before being marked as verified.</p>
+              </details>
+            </div>
           </div>
         </div>
       </div>
@@ -572,24 +612,48 @@
             <h3>Content Writing</h3>
             <p>Clear, well-structured written content tailored to your audience.</p>
             <button class="req-btn" onclick="requestService('Content Writing')">Request this service &rarr;</button> <a href="#pf-product-desc" class="req-btn" style="margin-left:14px; text-decoration:none;">See sample work &rarr;</a>
+            <div class="svc-demo">
+              <p class="demo-short">Short sample: "Our team helps small businesses stay organized, one task at a time."</p>
+              <details><summary>See long sample</summary>
+                <p class="demo-long">Long sample: Our team helps small businesses stay organized, one task at a time. Whether it's untangling a messy spreadsheet or getting your customer records in order, we focus on clear, dependable work that fits into how you already operate — no unnecessary complexity, just steady support you can rely on.</p>
+              </details>
+            </div>
           </div>
           <div class="svc-card">
             <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 3v5h5"/><path d="M6 3h8l5 5v13a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1Z"/><path d="M8 13h8M8 17h5"/></svg></div>
             <h3>Blog &amp; Article Writing</h3>
             <p>Readable, well-researched articles and blog posts written to a brief.</p>
             <button class="req-btn" onclick="requestService('Blog & Article Writing')">Request this service &rarr;</button> <a href="#pf-blog" class="req-btn" style="margin-left:14px; text-decoration:none;">See sample work &rarr;</a>
+            <div class="svc-demo">
+              <p class="demo-short">Short sample: "Staying organized while working remotely starts with a routine."</p>
+              <details><summary>See long sample</summary>
+                <p class="demo-long">Long sample: Staying organized while working remotely starts with a routine. Set a fixed start time each day, even if your schedule is flexible otherwise — it signals to your brain that work has begun. Keep a running list of the day's top three tasks instead of an open-ended to-do list, and review it each morning before opening email, so you start with intention rather than reacting to whatever lands in your inbox first.</p>
+              </details>
+            </div>
           </div>
           <div class="svc-card">
             <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/><circle cx="6.5" cy="6.5" r=".6" fill="currentColor" stroke="none"/><circle cx="9" cy="6.5" r=".6" fill="currentColor" stroke="none"/></svg></div>
             <h3>Website Content</h3>
             <p>Page copy for websites — about pages, service pages and more.</p>
             <button class="req-btn" onclick="requestService('Website Content')">Request this service &rarr;</button> <a href="#pf-website-content" class="req-btn" style="margin-left:14px; text-decoration:none;">See sample work &rarr;</a>
+            <div class="svc-demo">
+              <p class="demo-short">Short sample: "Reliable data support for small businesses — accurate, on time."</p>
+              <details><summary>See long sample</summary>
+                <p class="demo-long">Long sample: We help small businesses stay organized with straightforward data support — accurate, on time, and easy to work with. From data entry to spreadsheet cleanup, our focus is on getting the details right the first time, so you can spend less time double-checking and more time running your business.</p>
+              </details>
+            </div>
           </div>
           <div class="svc-card">
             <div class="icon-box"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 11v3a1 1 0 0 0 1 1h3l4 4V6L7 10H4a1 1 0 0 0-1 1Z"/><path d="M16 8a5 5 0 0 1 0 8"/></svg></div>
             <h3>Basic Copywriting</h3>
             <p>Short-form copy for product listings, descriptions and simple promotional text.</p>
             <button class="req-btn" onclick="requestService('Basic Copywriting')">Request this service &rarr;</button> <a href="#pf-product-desc" class="req-btn" style="margin-left:14px; text-decoration:none;">See sample work &rarr;</a>
+            <div class="svc-demo">
+              <p class="demo-short">Short sample: "Soft, warm, and made for everyday comfort."</p>
+              <details><summary>See long sample</summary>
+                <p class="demo-long">Long sample: Soft, warm, and made for everyday comfort — this lightweight cotton throw adds a cozy layer to any sofa or bed. Its simple, versatile weave fits naturally into most home styles, making it an easy addition to your space year-round.</p>
+              </details>
+            </div>
           </div>
         </div>
       </div>
@@ -902,7 +966,7 @@
     <a href="#home" class="back-top">Back to top ↑</a>
   </div>
   <div class="wrap" style="margin-top:10px;">
-    <p style="font-size:11px; color:#B8BEC3; font-family:'IBM Plex Mono',monospace;">Site version: v3</p>
+    <p style="font-size:11px; color:#B8BEC3; font-family:'IBM Plex Mono',monospace;">Site version: v4</p>
   </div>
 </footer>
 
